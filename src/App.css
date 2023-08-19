@@ -1,0 +1,125 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  width: 920px;
+  margin-top: 20px;
+  
+}
+
+.board::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #FFCDD2, #7831af);
+  z-index: -1;
+  border-radius: 10px;
+  opacity: 0.8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.board-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cell-container {
+  width: 100px;
+  height: 100px;
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  font-size: 48px;
+}
+
+.cell.active {
+  background-color: #def;
+}
+
+.status {
+  margin-top: 20px;
+}
+
+.checkboxes-container {
+  background: #FCE4EC;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox-container {
+  position: relative;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #FFCDD2;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.player-input-container {
+  background: #F1F1F1;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-input-container h2 {
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.player-input-container div {
+  margin-bottom: 10px;
+}
+
+.player-input-container input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #CCCCCC;
+}
+
+.player-input-container button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: #FFCDD2;
+  border: none;
+  color: #FFFFFF;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 24px;
+  color: #FFFFFF;
+  background: linear-gradient(45deg, #FFCDD2, #F06292);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result {
+  font-size: 28px;
+  color: #FF4081;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
